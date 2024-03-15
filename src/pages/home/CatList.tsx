@@ -1,9 +1,9 @@
 import { Box, Button, Typography } from '@mui/material';
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 const retreiveCats = async () => {
-  const response = await fetch('/cats');
-  const data = await response.json();
+  const { data } = await axios.get('/cats');
   return data;
 };
 
