@@ -1,5 +1,3 @@
-import { useCatStore } from '@/stores/useCatStore';
-import PublicIcon from '@mui/icons-material/Public';
 import { Box, Button, Typography } from '@mui/material';
 import { useQuery } from '@tanstack/react-query';
 
@@ -9,9 +7,7 @@ const retreiveCats = async () => {
   return data;
 };
 
-export default function Home() {
-  const { cats, increase } = useCatStore();
-
+export default function CatList() {
   const {
     data: catsData,
     isLoading,
@@ -23,10 +19,6 @@ export default function Home() {
     queryFn: retreiveCats,
     enabled: false,
   });
-
-  const increaseCats = () => {
-    increase(1);
-  };
 
   const refetchCats = () => {
     refetch();
@@ -40,19 +32,13 @@ export default function Home() {
         alignItems: 'center',
       }}
     >
-      <Typography variant='h3' sx={{ mt: 4 }}>
-        Hello, world! <PublicIcon sx={{ fontSize: 32 }} />
-      </Typography>
-      <Typography sx={{ mt: 8 }} variant='h6'>
-        Local cats count: {cats}
-      </Typography>
-      <Button onClick={increaseCats} sx={{ mt: 2 }} variant='contained'>
-        More cats
-      </Button>
-      {isLoading && <Typography>Loading...</Typography>}
-      {isError && <Typography>Error: {error?.message}</Typography>}
+      {isLoading && <Typography variant='h6'>Loading...</Typography>}
+      {isError && <Typography variant='h6'>Error: {error?.message}</Typography>}
+      {!catsData && !isLoading && !isError && (
+        <Typography variant='h6'>No cats fetched</Typography>
+      )}
       {catsData && (
-        <Box sx={{ mt: 4 }}>
+        <Box>
           <Typography variant='h6'>Cats from the server:</Typography>
           <ul>
             {catsData.data.map((cat: { id: number; name: string }) => (
