@@ -5,6 +5,16 @@ import { Box, Button, Typography } from '@mui/material';
 export default function Home() {
   const { cats, increase } = useCatStore();
 
+  const increaseCats = () => {
+    increase(1);
+  };
+
+  const makeRequest = async () => {
+    const response = await fetch('/cats');
+    const data = await response.json();
+    console.log(data);
+  };
+
   return (
     <Box
       sx={{
@@ -19,8 +29,11 @@ export default function Home() {
       <Typography sx={{ mt: 8 }} variant='h6'>
         Cats: {cats}
       </Typography>
-      <Button onClick={() => increase(1)} sx={{ mt: 2 }} variant='contained'>
+      <Button onClick={increaseCats} sx={{ mt: 2 }} variant='contained'>
         More cats
+      </Button>
+      <Button onClick={makeRequest} sx={{ mt: 2 }} variant='contained'>
+        Make request
       </Button>
     </Box>
   );
