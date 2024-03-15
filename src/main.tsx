@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import App from '@/App.tsx';
-import '@/assets/css/index.css';
-import '@/config/axios';
+import App from './App.tsx';
+import './assets/css/index.css';
+import './config/axios';
 
 async function enableMocking() {
   if (process.env.NODE_ENV !== 'development') {

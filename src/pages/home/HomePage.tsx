@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import CatList from './CatList';
 import CounterScreen from './CounterScreen';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Box
       sx={{
