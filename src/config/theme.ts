@@ -1,6 +1,6 @@
+import { LinkBehavior } from '@/components/LinkBehavior';
 import { LinkProps } from '@mui/material/Link';
 import createTheme from '@mui/material/styles/createTheme';
-import { LinkBehavior } from './LinkBehavior';
 
 export const theme = createTheme({
   typography: {

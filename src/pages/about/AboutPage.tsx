@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 export default function AboutPage() {
   return (
     <Box>
-      <Typography variant='h4' sx={{ textAlign: 'center', mt: 8 }}>
+      <Typography variant='h4' sx={{ textAlign: 'center', mt: 4 }}>
         About
       </Typography>
       <Typography
