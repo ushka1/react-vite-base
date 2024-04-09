@@ -1,4 +1,4 @@
-# Frontend Base
+# React Vite Base
 
 ## Description
 
