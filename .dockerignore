@@ -5,7 +5,7 @@ node_modules/
 
 .dockerignore
 .env
-.env.template
+.env.example
 .gitignore
 docker-compose.yml
 Dockerfile
