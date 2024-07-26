@@ -20,8 +20,6 @@ enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
       <App />
-    </React.StrictMode>,
+    </React.StrictMode>
   );
 });
-
-console.log(import.meta.env.VITE_MY_ENV);

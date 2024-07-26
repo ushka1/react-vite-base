@@ -10,6 +10,8 @@ RUN npm install
 # Copy project files
 COPY . .
 
+# Set environment variables
+ENV VITE_API_BASE_URL="http://localhost:8080"
 # Build the project
 RUN npm run build
 
