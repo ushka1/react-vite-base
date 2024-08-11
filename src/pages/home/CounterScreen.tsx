@@ -1,5 +1,5 @@
-import { useCounterStore } from '@/stores/useCounterStore';
-import { Box, Button, Typography } from '@mui/material';
+import { useCounterStore } from "@/stores/useCounterStore";
+import { Box, Button, Typography } from "@mui/material";
 
 export default function CounterScreen() {
   const { count, increase } = useCounterStore();
@@ -10,10 +10,10 @@ export default function CounterScreen() {
 
   return (
     <Box>
-      <Typography sx={{ mt: 4 }} variant='h6'>
+      <Typography sx={{ mt: 4 }} variant="h6">
         Counter: {count}
       </Typography>
-      <Button onClick={increaseCount} sx={{ mt: 2 }} variant='contained'>
+      <Button onClick={increaseCount} sx={{ mt: 2 }} variant="contained">
         Increase
       </Button>
     </Box>

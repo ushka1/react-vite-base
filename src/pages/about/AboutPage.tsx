@@ -1,14 +1,14 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography } from "@mui/material";
 
 export default function AboutPage() {
   return (
     <Box>
-      <Typography variant='h4' sx={{ textAlign: 'center', mt: 4 }}>
+      <Typography variant="h4" sx={{ textAlign: "center", mt: 4 }}>
         About
       </Typography>
       <Typography
-        variant='body1'
-        sx={{ textAlign: 'center', mt: 2, mx: 'auto', maxWidth: 500 }}
+        variant="body1"
+        sx={{ textAlign: "center", mt: 2, mx: "auto", maxWidth: 500 }}
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
         possimus accusantium eius magnam, provident blanditiis architecto
